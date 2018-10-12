@@ -8,8 +8,11 @@ namespace Janus
 {
     class Program
     {
+        public static ConnectionClass dbConn;
+
         static void Main(string[] args)
         {
+            dbConn = new ConnectionClass();
         }
     }
 }
