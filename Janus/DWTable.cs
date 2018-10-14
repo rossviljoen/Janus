@@ -25,6 +25,9 @@ namespace Janus
 
         public override bool Equals(object obj)
         {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
             return (obj is DWTable) && ((DWTable)obj).tableName == tableName;
         }
     }

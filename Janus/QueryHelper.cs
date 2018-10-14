@@ -14,7 +14,7 @@ namespace Janus
 
         public static List<DWTable> GetSPs()
         {
-            string spQuery = "select SPECIFIC_NAME from LocalTest.information_schema.routines where routine_type = 'PROCEDURE'";
+            string spQuery = String.Format("select SPECIFIC_NAME from {0}.information_schema.routines where routine_type = 'PROCEDURE'", sqlConn.Database) ;
 
             using (SqlCommand comm = new SqlCommand(spQuery, sqlConn))
             using (SqlDataReader reader = comm.ExecuteReader())
@@ -37,20 +37,17 @@ namespace Janus
 
         public static List<string> GetSpDependencies(DWTable table)
         {
-            string depQuery = "SELECT DISTINCT referenced_entity_name FROM sys.dm_sql_referenced_entities(@sp_name, 'OBJECT') WHERE CHARINDEX(referenced_entity_name , @sp_name) = 0";
+            string depQuery = String.Format("USE {0} SELECT DISTINCT referenced_entity_name FROM sys.dm_sql_referenced_entities('dbo.{1}', 'OBJECT') WHERE CHARINDEX(referenced_entity_name , '{1}') = 0", sqlConn.Database, table.strProc);
 
             using (SqlCommand comm = new SqlCommand(depQuery, sqlConn))
+            using (SqlDataReader reader = comm.ExecuteReader())
             {
-                comm.Parameters.Add(new SqlParameter("sp_name", table.tableName));
-                using (SqlDataReader reader = comm.ExecuteReader())
+                List<string> depList = new List<string>();
+                while (reader.Read())
                 {
-                    List<string> depList = new List<string>();
-                    while (reader.Read())
-                    {
-                        depList.Add(reader.GetValue(0).ToString());
-                    }
-                    return depList;
+                    depList.Add(reader.GetValue(0).ToString());
                 }
+                return depList;
             }
         }
     }

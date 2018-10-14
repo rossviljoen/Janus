@@ -9,7 +9,7 @@ namespace Janus
 {
     class GraphBuilder
     {
-        public static AdjacencyGraph<DWTable, SEquatableEdge<DWTable>> CreateGraph()
+        public static  AdjacencyGraph<DWTable, SEquatableEdge<DWTable>> CreateGraph()
         {
             var spList = QueryHelper.GetSPs();
             var newGraph = new AdjacencyGraph<DWTable, SEquatableEdge<DWTable>>();
