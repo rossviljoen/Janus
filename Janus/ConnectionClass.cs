@@ -36,6 +36,7 @@ namespace Janus
             catch
             {
                 conn.Dispose();
+                Console.WriteLine("Connection to " + server + "." + db + "failed.");
                 return null;
             }
         }

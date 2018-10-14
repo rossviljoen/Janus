@@ -12,7 +12,10 @@ namespace Janus
 
         static void Main(string[] args)
         {
-            dbConn = new ConnectionClass();
+            using (dbConn = new ConnectionClass())
+            {
+                var dwGraph = GraphBuilder.CreateGraph();
+            }
         }
     }
 }
