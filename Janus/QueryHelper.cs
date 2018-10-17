@@ -29,12 +29,6 @@ namespace Janus
             }
         }
 
-        //private static DWTable CreateSpDwTable(string inputName)
-        //{
-        //    string trimmedName = Regex.Replace(inputName, "(update_)", "");
-        //    return new DWTable(inputName, trimmedName);
-        //}
-
         public static List<string> GetSpDependencies(DWTable table)
         {
             string depQuery = String.Format("USE {0} SELECT DISTINCT referenced_entity_name FROM sys.dm_sql_referenced_entities('dbo.{1}', 'OBJECT') WHERE CHARINDEX(referenced_entity_name , '{1}') = 0", sqlConn.Database, table.strProc);

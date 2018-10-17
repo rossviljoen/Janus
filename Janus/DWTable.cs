@@ -30,5 +30,11 @@ namespace Janus
 
             return (obj is DWTable) && ((DWTable)obj).tableName == tableName;
         }
+
+        public override int GetHashCode()
+        {
+            return -28095652 + EqualityComparer<string>.Default.GetHashCode(tableName);
+        }
+
     }
 }

@@ -27,16 +27,5 @@ namespace Janus
             }
             return newGraph;
         }
-
-        //private Dictionary<DWTable, SEquatableEdge<DWTable>[]> CreateDictionary()
-        //{
-        //    var spList = QueryHelper.GetSPs();
-        //    var spDic = new Dictionary<DWTable, SEquatableEdge<DWTable>[]>();
-        //    foreach (var sp in spList)
-        //    {
-        //        var depList = QueryHelper.GetSpDependencies(sp);
-
-        //    }
-        //}
     }
 }
