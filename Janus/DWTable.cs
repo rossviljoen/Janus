@@ -9,18 +9,18 @@ namespace Janus
 {
     struct DWTable
     {
-        public String tableName;
-        public String strProc;
+        public String TableName { get; }
+        public String StrProc { get; }
         public DWTable(string name, string strProc)
         {
-            this.tableName = name;
-            this.strProc = strProc;
+            this.TableName = name;
+            this.StrProc = strProc;
         }
 
         public DWTable(string strProc)
         {
-            this.tableName = Regex.Replace(strProc, "(update_)", "");
-            this.strProc = strProc;
+            this.TableName = Regex.Replace(strProc, "(update_)", "");
+            this.StrProc = strProc;
         }
 
         public override bool Equals(object obj)
@@ -28,12 +28,12 @@ namespace Janus
             if (obj == null || GetType() != obj.GetType())
                 return false;
 
-            return (obj is DWTable) && ((DWTable)obj).tableName == tableName;
+            return (obj is DWTable) && ((DWTable)obj).TableName == TableName;
         }
 
         public override int GetHashCode()
         {
-            return -28095652 + EqualityComparer<string>.Default.GetHashCode(tableName);
+            return -28095652 + EqualityComparer<string>.Default.GetHashCode(TableName);
         }
 
     }

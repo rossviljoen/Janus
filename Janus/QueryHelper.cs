@@ -31,7 +31,7 @@ namespace Janus
 
         public static List<string> GetSpDependencies(DWTable table)
         {
-            string depQuery = String.Format("USE {0} SELECT DISTINCT referenced_entity_name FROM sys.dm_sql_referenced_entities('dbo.{1}', 'OBJECT') WHERE CHARINDEX(referenced_entity_name , '{1}') = 0", sqlConn.Database, table.strProc);
+            string depQuery = String.Format("USE {0} SELECT DISTINCT referenced_entity_name FROM sys.dm_sql_referenced_entities('dbo.{1}', 'OBJECT') WHERE CHARINDEX(referenced_entity_name , '{1}') = 0", sqlConn.Database, table.StrProc);
 
             using (SqlCommand comm = new SqlCommand(depQuery, sqlConn))
             using (SqlDataReader reader = comm.ExecuteReader())

@@ -92,92 +92,92 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="GraphViz\config6">
+    <None Include="external\config6">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="GraphViz\cdt.dll">
+    <Content Include="external\cdt.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\cgraph.dll">
+    <Content Include="external\cgraph.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\dot.exe">
+    <Content Include="external\dot.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\freetype6.dll">
+    <Content Include="external\freetype6.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\gvc.dll">
+    <Content Include="external\gvc.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\gvplugin_core.dll">
+    <Content Include="external\gvplugin_core.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\gvplugin_dot_layout.dll">
+    <Content Include="external\gvplugin_dot_layout.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\gvplugin_gd.dll">
+    <Content Include="external\gvplugin_gd.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\gvplugin_gdiplus.dll">
+    <Content Include="external\gvplugin_gdiplus.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\iconv.dll">
+    <Content Include="external\iconv.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\intl.dll">
+    <Content Include="external\intl.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\jpeg62.dll">
+    <Content Include="external\jpeg62.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libcairo-2.dll">
+    <Content Include="external\libcairo-2.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libexpat-1.dll">
+    <Content Include="external\libexpat-1.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libexpat.dll">
+    <Content Include="external\libexpat.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libfontconfig-1.dll">
+    <Content Include="external\libfontconfig-1.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libfreetype-6.dll">
+    <Content Include="external\libfreetype-6.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libglib-2.0-0.dll">
+    <Content Include="external\libglib-2.0-0.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libgmodule-2.0-0.dll">
+    <Content Include="external\libgmodule-2.0-0.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libgobject-2.0-0.dll">
+    <Content Include="external\libgobject-2.0-0.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libgthread-2.0-0.dll">
+    <Content Include="external\libgthread-2.0-0.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libpng12.dll">
+    <Content Include="external\libpng12.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libpng14-14.dll">
+    <Content Include="external\libpng14-14.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\libxml2.dll">
+    <Content Include="external\libxml2.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\ltdl.dll">
+    <Content Include="external\ltdl.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\Pathplan.dll">
+    <Content Include="external\Pathplan.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GraphViz\zlib1.dll">
+    <Content Include="external\zlib1.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

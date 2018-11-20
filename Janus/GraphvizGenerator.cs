@@ -11,6 +11,7 @@ namespace Janus
     class GraphvizGenerator
     {
         IEdgeListGraph<DWTable, SEquatableEdge<DWTable>> graph;
+        string filePath = @"C:\dev\Janus\Janus\outputfile.dot";
 
         public GraphvizGenerator(IEdgeListGraph<DWTable, SEquatableEdge<DWTable>> graph)
         {
@@ -20,10 +21,10 @@ namespace Janus
         public void Run()
         {
             GraphvizAlgorithm<DWTable, SEquatableEdge<DWTable>> graphviz = new GraphvizAlgorithm<DWTable, SEquatableEdge<DWTable>>(graph);
-            graphviz.FormatVertex += (sender, args) => args.VertexFormatter.Label = args.Vertex.ToString();
-            //           graphviz.FormatEdge += (sender, args) => { args.EdgeFormatter.Label.Value = args.Edge.Label; };
+            graphviz.FormatVertex += (sender, args) => args.VertexFormatter.Label = args.Vertex.StrProc;
+//           graphviz.FormatEdge += (sender, args) => { args.EdgeFormatter.Label.Value = args.Edge.Label; };
 
-            graphviz.Generate(new GraphvizEngine(), filePath);
+            graphviz.Generate(new FileDotEngine(), filePath);
         }
     }
 }
