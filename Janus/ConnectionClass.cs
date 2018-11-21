@@ -24,7 +24,7 @@ namespace Janus
         {
             SqlConnection conn = null;
             string server = "DESKTOP-MRTU3J5";
-            string db = "Gemini_DW";
+            string db = "GemTest";
             string cnnString = string.Format("Server={0};Database={1};Trusted_Connection=SSPI;", server, db);
             try
             {

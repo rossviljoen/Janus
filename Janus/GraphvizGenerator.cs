@@ -1,5 +1,6 @@
 ﻿using QuickGraph;
 using QuickGraph.Graphviz;
+using QuickGraph.Graphviz.Dot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,9 @@ namespace Janus
         {
             GraphvizAlgorithm<DWTable, SEquatableEdge<DWTable>> graphviz = new GraphvizAlgorithm<DWTable, SEquatableEdge<DWTable>>(graph);
             graphviz.FormatVertex += (sender, args) => args.VertexFormatter.Label = args.Vertex.StrProc;
-//           graphviz.FormatEdge += (sender, args) => { args.EdgeFormatter.Label.Value = args.Edge.Label; };
-
-            graphviz.Generate(new FileDotEngine(), filePath);
+            //           graphviz.FormatEdge += (sender, args) => { args.EdgeFormatter.Label.Value = args.Edge.Label; };
+            graphviz.ImageType = GraphvizImageType.Jpeg;
+            graphviz.Generate(new GraphvizEngine(), filePath);
         }
     }
 }
